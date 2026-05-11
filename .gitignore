@@ -1,0 +1,44 @@
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+
+# Xcode & VIM
+*.swp
+*~.nib
+*~
+
+*.pbxuser
+*.perspective
+*.perspectivev3
+
+*.mode1v3
+*.mode2v3
+
+Documentation/Generated
+doxygenWarnings.txt
+xcuserdata
+
+
+# VS Code
+/.favorites.json
+
+
+# golang
+_obj
+_test
+*.out
+_testmain.go
+\#*
+.\#*
+*.log
+_cgo*
+*.o
+
+/target
