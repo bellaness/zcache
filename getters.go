@@ -62,3 +62,6 @@ func GetString(ctx context.Context, key string) (string, error) { return GetT[st
 
 // GetBool 等同 GetT[bool]。
 func GetBool(ctx context.Context, key string) (bool, error) { return GetT[bool](ctx, key) }
+
+// GetBytes 等同 GetT[[]byte]。
+func GetBytes(ctx context.Context, key string) ([]byte, error) { return GetT[[]byte](ctx, key) }

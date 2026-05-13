@@ -132,6 +132,7 @@ func GetT[T any](ctx context.Context, key string) (T, error)
 func GetInt(ctx context.Context, key string) (int, error)
 func GetString(ctx context.Context, key string) (string, error)
 func GetBool(ctx context.Context, key string) (bool, error)
+func GetBytes(ctx context.Context, key string) ([]byte, error)
 ```
 
 读取行为：
@@ -153,7 +154,7 @@ if errors.Is(err, context.Canceled) || errors.Is(err, context.DeadlineExceeded) 
 }
 ```
 
-便捷的 `GetInt` / `GetString` / `GetBool` 是 `GetT[int]` / `GetT[string]` / `GetT[bool]` 的薄封装。
+便捷的 `GetInt` / `GetString` / `GetBool` / `GetBytes` 是 `GetT[int]` / `GetT[string]` / `GetT[bool]` / `GetT[[]byte]` 的薄封装。
 
 ### `ctx` 的语义细节
 

@@ -315,6 +315,7 @@ func TestGet_TypedConvenience(t *testing.T) {
 	Set("i", 7, 0)
 	Set("s", "hello", 0)
 	Set("b", true, 0)
+	Set("bytes", []byte("world"), 0)
 
 	ctx := context.Background()
 	if v, err := GetInt(ctx, "i"); err != nil || v != 7 {
@@ -325,6 +326,9 @@ func TestGet_TypedConvenience(t *testing.T) {
 	}
 	if v, err := GetBool(ctx, "b"); err != nil || !v {
 		t.Errorf("GetBool = %v, %v", v, err)
+	}
+	if v, err := GetBytes(ctx, "bytes"); err != nil || string(v) != "world" {
+		t.Errorf("GetBytes = %s, %v", v, err)
 	}
 
 	// 类型不匹配
